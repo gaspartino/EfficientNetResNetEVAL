@@ -8,12 +8,12 @@ A framework for training and evaluating deep learning models for traffic light r
   - ResNet-50
   - EfficientNet-B0
 - Support for traffic light datasets:
-  - BSTL (Brazilian Traffic Light Dataset)
-  - LISA Traffic Light Dataset
+  - BSTL (Bosch Small Traffic Lights)
+  - LISA (Laboratory for Intelligent and Safe Automobiles) Cropped Traffic Lights
 - Adversarial robustness evaluation with:
   - FGSM
   - PGD
-  - MIM
+  - MI-FGSM
   - AutoAttack
 - Multiple independent training runs.
 - Optional ImageNet normalization.
@@ -155,7 +155,7 @@ The framework evaluates model robustness against several adversarial attacks:
 
 - Fast Gradient Sign Method (FGSM)
 - Projected Gradient Descent (PGD)
-- Momentum Iterative Method (MIM)
+- Momentum Iterative Fast Gradient Sign Method (MI-FGSM)
 - AutoAttack
 
 For each attack and perturbation level, the following metrics are reported:
