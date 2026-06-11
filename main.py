@@ -58,6 +58,8 @@ for loop_idx in range(args.total_loops):
     model = model.to(device)
     model.eval()
 
+    accuracy_clean(model, test_loader, device)
+    
     for eps in all_eps:
         acc, prec, rec, f1 = accuracy_FGSM(model, test_loader, eps, device, args.normalize)
         
